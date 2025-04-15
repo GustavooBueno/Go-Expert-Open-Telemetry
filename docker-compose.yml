@@ -5,7 +5,8 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - WEATHER_API_KEY=<SUA_WEATHER_API_KEY>
+      # Obtenha sua chave gratuita em https://www.weatherapi.com/
+      - WEATHER_API_KEY=SUA_CHAVE_API_AQUI
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318
     depends_on:
       - service_b
@@ -16,7 +17,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - WEATHER_API_KEY=<SUA_WEATHER_API_KEY>
+      # Obtenha sua chave gratuita em https://www.weatherapi.com/
+      - WEATHER_API_KEY=SUA_CHAVE_API_AQUI
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318
     depends_on:
       - otel-collector
